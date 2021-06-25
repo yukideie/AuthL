@@ -1,0 +1,95 @@
+﻿<Window x:Class="AuthL.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuthL"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Height="700" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFD4D78E"/>
+                <GradientStop Color="#FF97D0CD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Добавление пользователя" FontFamily="Century Gothic"
+                   FontSize="40"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   Margin="50"/>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Right">
+            <TextBlock Text="Логин:" FontFamily="Century Gothic"
+                       FontSize="25" Margin="15"/>
+            <TextBlock Text="Пароль:" FontFamily="Century Gothic"
+                       FontSize="25" Margin="15"/>
+            <TextBlock Text="Имя:" FontFamily="Century Gothic"
+                       FontSize="25"
+                       Margin="15"/>
+            <TextBlock Text="Отчество:" FontFamily="Century Gothic"
+                       FontSize="25" Margin="15"/>
+            <TextBlock Text="Фамилия:" FontFamily="Century Gothic"
+                       FontSize="25" Margin="15"/>
+            <TextBlock Text="Пол:" FontFamily="Century Gothic"
+                       FontSize="25" Margin="15"/>
+            <TextBlock Text="Роль:" FontFamily="Century Gothic"
+                       FontSize="25" Margin="15"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Grid.Column="1">
+            <TextBox x:Name="tbxLogin"
+                     Width="350"
+                     FontSize="20" FontFamily="Century Gothic"
+                     Height="35" Margin="10"/>
+            <TextBox x:Name="tbxPassword"
+                     Width="350"
+                     FontSize="20" FontFamily="Century Gothic"
+                     Height="35" Margin="10"/>
+            <TextBox x:Name="tbxFName"
+                     Width="350"
+                     FontSize="20" FontFamily="Century Gothic"
+                     Height="35" Margin="15"/>
+            <TextBox x:Name="tbxMName"
+                     Width="350"
+                     FontSize="20" FontFamily="Century Gothic"
+                     Height="35" Margin="15"/>
+            <TextBox x:Name="tbxLName"
+                     Width="350"
+                     FontSize="20" FontFamily="Century Gothic"
+                     Height="35" Margin="10"/>
+            <ComboBox x:Name="cbGender"
+                     Width="350"
+                      FontSize="20" FontFamily="Century Gothic"
+                     Height="35" Margin="15"/>
+            <ComboBox x:Name="cbRole"
+                      Width="350"
+                      FontSize="20" FontFamily="Century Gothic"
+                     Height="35" Margin="10"/>
+        </StackPanel>
+        <WrapPanel Grid.ColumnSpan="2"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Margin="40">
+            <Button x:Name="btnAdd"
+                    Height="30"
+                    Width="120"
+                    Content="Добавить" FontFamily="Century Gothic"
+                    FontSize="20"
+                    Margin="10" Click="btnAdd_Click" Background="#FFDFDBC3"/>
+            <Button x:Name="btnBack"
+                    Height="30"
+                    Width="120"
+                    Content="Назад" FontFamily="Century Gothic"
+                    FontSize="20"
+                    Margin="10" Click="btnBack_Click" Background="#FFDFDBC3"/>
+        </WrapPanel>
+    </Grid>
+</Window>
